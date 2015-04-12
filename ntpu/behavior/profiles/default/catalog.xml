@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<object name="portal_catalog" meta_type="Plone Catalog Tool">
+
+  <index name="authorNameC" meta_type="FieldIndex">
+    <indexed_attr value="authorNameC" />
+  </index>
+  <column value="authorNameC"/>
+
+  <index name="authorNameE" meta_type="FieldIndex">
+    <indexed_attr value="authorNameE" />
+  </index>
+  <column value="authorNameE"/>
+
+  <column value="institutionC"/>
+
+  <column value="institutionE"/>
+
+  <index name="titleC" meta_type="FieldIndex">
+    <indexed_attr value="titleC" />
+  </index>
+  <column value="titleC"/>
+
+  <index name="titleE" meta_type="FieldIndex">
+    <indexed_attr value="titleE" />
+  </index>
+  <column value="titleE"/>
+
+  <column value="email"/>
+
+  <column value="phone"/>
+
+</object>
+
