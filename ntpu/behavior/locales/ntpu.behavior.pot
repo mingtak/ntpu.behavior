@@ -1,0 +1,79 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2015-04-15 02:52+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: ntpu.behavior\n"
+
+#: ./authorinformation.py:31
+msgid "Author Information"
+msgstr ""
+
+#: ./authorinformation.py:71
+msgid "Email"
+msgstr ""
+
+#: ./authorinformation.py:35
+msgid "Enter author information(fields in RED DOT are Required )"
+msgstr ""
+
+#: ./authorinformation.py:51
+msgid "Institution(Chinese)"
+msgstr ""
+
+#: ./authorinformation.py:56
+msgid "Institution(English)"
+msgstr ""
+
+#: ./authorinformation.py:22
+msgid "Invalid email address."
+msgstr ""
+
+#: ./attachedfile.py:18
+msgid "Manuscript file"
+msgstr ""
+
+#: ./authorinformation.py:39
+msgid "Name(Chinese)"
+msgstr ""
+
+#: ./authorinformation.py:45
+msgid "Name(English)"
+msgstr ""
+
+#: ./authorinformation.py:77
+msgid "Phone number"
+msgstr ""
+
+#: ./attachedfile.py:21
+msgid "Please upload Manuscript file, and you can upload images after submitting."
+msgstr ""
+
+#: ./authorinformation.py:61
+msgid "Title(Chinese)"
+msgstr ""
+
+#: ./authorinformation.py:66
+msgid "Title(English)"
+msgstr ""
+
+#: ./authorinformation.py:46
+msgid "e.g. Da-Ming Wang"
+msgstr ""
+
+#: ./authorinformation.py:40
+msgid "e.g. Da-Ming Wang."
+msgstr ""
+

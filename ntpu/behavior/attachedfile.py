@@ -2,7 +2,7 @@ from plone.autoform.interfaces import IFormFieldProvider
 from plone.dexterity.interfaces import IDexterityContent
 from plone.supermodel import model
 from zope import schema
-from plone.directives import form
+from plone.directives import form, dexterity
 from zope.component import adapts
 from zope.interface import alsoProvides, implements
 from plone.namedfile.field import NamedBlobFile
@@ -21,6 +21,7 @@ class IAttachedFile(model.Schema):
         description=_(u'Please upload Manuscript file, and you can upload images after submitting.'),
     )
 
+    dexterity.write_permission(attachFile='ntpu.content.IsOwner')
     attachFile = NamedBlobFile(
         title=_(u'Manuscript file'),
         required = True,

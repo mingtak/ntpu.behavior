@@ -37,7 +37,7 @@ class IAuthorInformation(model.Schema):
 
     authorNameC = schema.TextLine(
         title=_(u'Name(Chinese)'),
-        description=_(u'e.g. Da-Ming Wang'),
+        description=_(u'e.g. Da-Ming Wang.'),
         required=False,
     )
 

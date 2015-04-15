@@ -1,0 +1,76 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2015-04-15 02:52+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ./authorinformation.py:31
+msgid "Author Information"
+msgstr "作者資訊"
+
+#: ./authorinformation.py:71
+msgid "Email"
+msgstr "電子郵件"
+
+#: ./authorinformation.py:35
+msgid "Enter author information(fields in RED DOT are Required )"
+msgstr "請輸入作者資訊(有紅點欄位為必填)"
+
+#: ./authorinformation.py:51
+msgid "Institution(Chinese)"
+msgstr "所屬機關(中文)"
+
+#: ./authorinformation.py:56
+msgid "Institution(English)"
+msgstr "所屬機關(英文)"
+
+#: ./authorinformation.py:22
+msgid "Invalid email address."
+msgstr "無效的電子郵件格式"
+
+#: ./attachedfile.py:18
+msgid "Manuscript file"
+msgstr "稿件電子檔"
+
+#: ./authorinformation.py:39
+msgid "Name(Chinese)"
+msgstr "姓名(中文)"
+
+#: ./authorinformation.py:45
+msgid "Name(English)"
+msgstr "姓名(英文)"
+
+#: ./authorinformation.py:77
+msgid "Phone number"
+msgstr "電話碼碼"
+
+#: ./attachedfile.py:21
+msgid "Please upload Manuscript file, and you can upload images after submitting."
+msgstr "請上傳稿件電子檔，您可以在提交稿件之後再上傳其它相關圖片"
+
+#: ./authorinformation.py:61
+msgid "Title(Chinese)"
+msgstr "職稱(中文)"
+
+#: ./authorinformation.py:66
+msgid "Title(English)"
+msgstr "職稱(英文)"
+
+#: ./authorinformation.py:46
+msgid "e.g. Da-Ming Wang"
+msgstr "例: Da-Ming Wang"
+
+#: ./authorinformation.py:40
+msgid "e.g. Da-Ming Wang."
+msgstr "例: 王大明"
+
