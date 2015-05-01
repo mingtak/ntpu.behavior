@@ -6,11 +6,12 @@ from plone.dexterity.interfaces import IDexterityContent
 from plone.supermodel import model
 from zope import schema
 from zope.component import adapts
-from zope.interface import alsoProvides, implements, Interface, Invalid
+from zope.interface import alsoProvides, implements, Interface, Invalid, invariant
 from plone.directives import form
 
 from Products.CMFDefault.utils import checkEmailAddress
 from Products.CMFDefault.exceptions import EmailAddressInvalid
+from plone import api
 
 from ntpu.behavior import MessageFactory as _
 
@@ -19,6 +20,8 @@ def checkEmail(value):
     try:
         checkEmailAddress(value)
     except EmailAddressInvalid:
+#        portal = api.portal.get()
+#        api.portal.show_message(message='Wrong Eamil format!', request=portal.REQUEST, type='warning')
         raise Invalid(_(u"Invalid email address."))
     return True
 
@@ -38,7 +41,7 @@ class IAuthorInformation(model.Schema):
     authorNameC = schema.TextLine(
         title=_(u'Name(Chinese)'),
         description=_(u'e.g. Da-Ming Wang.'),
-        required=False,
+        required=True,
     )
 
     authorNameE = schema.TextLine(
@@ -49,7 +52,7 @@ class IAuthorInformation(model.Schema):
 
     institutionC = schema.TextLine(
         title=_(u'Institution(Chinese)'),
-        required=False,
+        required=True,
     )
 
     institutionE = schema.TextLine(
@@ -59,7 +62,7 @@ class IAuthorInformation(model.Schema):
 
     titleC = schema.TextLine(
         title=_(u'Title(Chinese)'),
-        required=False,
+        required=True,
     )
 
     titleE = schema.TextLine(
@@ -69,14 +72,28 @@ class IAuthorInformation(model.Schema):
 
     email = schema.TextLine(
         title=_(u'Email'),
-        constraint=checkEmail,
-        required=True,
+#        constraint=checkEmail,
+        required=False,
     )
 
     phone = schema.TextLine(
         title=_('Phone number'),
         required=False,
     )
+
+    @invariant
+    def validateEmail(data):
+        if data.email is None:
+            return True
+        try:
+            checkEmailAddress(data.email)
+        except EmailAddressInvalid:
+#            import pdb; pdb.set_trace()
+            portal = api.portal.get()
+            api.portal.show_message(message='Wrong Eamil format!', request=portal.REQUEST, type='error')
+            raise Invalid(_(u"Invalid email address."))
+        return True
+
 
 
 alsoProvides(IAuthorInformation, IFormFieldProvider)

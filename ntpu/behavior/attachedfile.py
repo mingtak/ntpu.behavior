@@ -24,7 +24,7 @@ class IAttachedFile(model.Schema):
     dexterity.write_permission(attachFile='ntpu.content.IsOwner')
     attachFile = NamedBlobFile(
         title=_(u'Manuscript file'),
-        required = True,
+        required = False,
     )
 
 
