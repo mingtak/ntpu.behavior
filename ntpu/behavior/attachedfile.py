@@ -4,8 +4,9 @@ from plone.supermodel import model
 from zope import schema
 from plone.directives import form, dexterity
 from zope.component import adapts
-from zope.interface import alsoProvides, implements
-from plone.namedfile.field import NamedBlobFile
+from zope.interface import alsoProvides, implements, invariant, Invalid
+from plone.namedfile.field import NamedBlobImage, NamedBlobFile
+from plone import api
 
 from ntpu.behavior import MessageFactory as _
 
@@ -17,8 +18,18 @@ class IAttachedFile(model.Schema):
     form.fieldset(
         _(u'Manuscript file'),
         label=_(u"Manuscript file"),
-        fields=['attachFile'],
-        description=_(u'Please upload Manuscript file, and you can upload images after submitting.'),
+        fields=['attachFile',
+                'attachImage1',
+                'attachImage2' ,
+                'attachImage3' ,
+                'attachImage4' ,
+                'attachImage5' ,
+                'attachImage6' ,
+                'attachImage7' ,
+                'attachImage8' ,
+                'attachImage9' ,
+                'attachImage10',],
+#        description=_(u'Please upload Manuscript file, and you can upload images after submitting.'),
     )
 
     dexterity.write_permission(attachFile='ntpu.content.IsOwner')
@@ -26,6 +37,82 @@ class IAttachedFile(model.Schema):
         title=_(u'Manuscript file'),
         required = False,
     )
+
+    dexterity.write_permission(attachImage1='ntpu.content.IsOwner')
+    attachImage1 = NamedBlobImage(
+        title=_(u'First attach image'),
+        required = False,
+    )
+
+    dexterity.write_permission(attachImage2='ntpu.content.IsOwner')
+    attachImage2 = NamedBlobImage(
+        title=_(u'Second attach image'),
+        required = False,
+    )
+
+    dexterity.write_permission(attachImage3='ntpu.content.IsOwner')
+    attachImage3 = NamedBlobImage(
+        title=_(u'Third attach image'),
+        required = False,
+    )
+
+    dexterity.write_permission(attachImage4='ntpu.content.IsOwner')
+    attachImage4 = NamedBlobImage(
+        title=_(u'4th attach image'),
+        required = False,
+    )
+
+    dexterity.write_permission(attachImage5='ntpu.content.IsOwner')
+    attachImage5 = NamedBlobImage(
+        title=_(u'5th attach image'),
+        required = False,
+    )
+
+
+    dexterity.write_permission(attachImage6='ntpu.content.IsOwner')
+    attachImage6 = NamedBlobImage(
+        title=_(u'6th attach image'),
+        required = False,
+    )
+
+
+    dexterity.write_permission(attachImage7='ntpu.content.IsOwner')
+    attachImage7 = NamedBlobImage(
+        title=_(u'7th attach image'),
+        required = False,
+    )
+
+    dexterity.write_permission(attachImage8='ntpu.content.IsOwner')
+    attachImage8 = NamedBlobImage(
+        title=_(u'8th attach image'),
+        required = False,
+    )
+
+    dexterity.write_permission(attachImage9='ntpu.content.IsOwner')
+    attachImage9 = NamedBlobImage(
+        title=_(u'9th attach image'),
+        required = False,
+    )
+
+    dexterity.write_permission(attachImage10='ntpu.content.IsOwner')
+    attachImage10 = NamedBlobImage(
+        title=_(u'10th attach image'),
+        required = False,
+    )
+
+    @invariant
+    def checkFileType(data):
+        if data.attachFile is None:
+            return
+        subFileName = data.attachFile.filename.split('.')[-1].lower()
+        if subFileName in [u'doc', u'docx']:
+            return
+        else:
+            portal = api.portal.get()
+            request = portal.REQUEST
+            message = _(u'Please upload *.doc or *.docx file.')
+            api.portal.show_message(message=message, request=request, type='error')
+            raise Invalid(message)
 
 
 alsoProvides(IAttachedFile, IFormFieldProvider)
@@ -52,3 +139,13 @@ class AttachedFile(object):
 
     # -*- Your behavior property setters & getters here ... -*-
     attachFile = context_property('attachFile')
+    attachImage = context_property('attachImage1')
+    attachImage = context_property('attachImage2')
+    attachImage = context_property('attachImage3')
+    attachImage = context_property('attachImage4')
+    attachImage = context_property('attachImage5')
+    attachImage = context_property('attachImage6')
+    attachImage = context_property('attachImage7')
+    attachImage = context_property('attachImage8')
+    attachImage = context_property('attachImage9')
+    attachImage = context_property('attachImage10')
