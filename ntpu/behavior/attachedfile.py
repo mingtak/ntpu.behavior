@@ -19,6 +19,7 @@ class IAttachedFile(model.Schema):
         _(u'Manuscript file'),
         label=_(u"Manuscript file"),
         fields=['attachFile',
+                'commentReply',
                 'attachImage1',
                 'attachImage2' ,
                 'attachImage3' ,
@@ -35,6 +36,13 @@ class IAttachedFile(model.Schema):
     dexterity.write_permission(attachFile='ntpu.content.IsOwner')
     attachFile = NamedBlobFile(
         title=_(u'Manuscript file'),
+        required = False,
+    )
+
+    dexterity.write_permission(attachFile='ntpu.content.IsOwner')
+    form.mode(commentReply='hidden')
+    commentReply = NamedBlobFile(
+        title=_('Comment reply'),
         required = False,
     )
 
@@ -139,13 +147,14 @@ class AttachedFile(object):
 
     # -*- Your behavior property setters & getters here ... -*-
     attachFile = context_property('attachFile')
-    attachImage = context_property('attachImage1')
-    attachImage = context_property('attachImage2')
-    attachImage = context_property('attachImage3')
-    attachImage = context_property('attachImage4')
-    attachImage = context_property('attachImage5')
-    attachImage = context_property('attachImage6')
-    attachImage = context_property('attachImage7')
-    attachImage = context_property('attachImage8')
-    attachImage = context_property('attachImage9')
-    attachImage = context_property('attachImage10')
+    commentReply = context_property('commentReply')
+    attachImage1 = context_property('attachImage1')
+    attachImage2 = context_property('attachImage2')
+    attachImage3 = context_property('attachImage3')
+    attachImage4 = context_property('attachImage4')
+    attachImage5 = context_property('attachImage5')
+    attachImage6 = context_property('attachImage6')
+    attachImage7 = context_property('attachImage7')
+    attachImage8 = context_property('attachImage8')
+    attachImage9 = context_property('attachImage9')
+    attachImage10 = context_property('attachImage10')
