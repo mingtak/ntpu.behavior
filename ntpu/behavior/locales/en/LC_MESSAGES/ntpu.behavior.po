@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-04-15 02:52+0000\n"
+"POT-Creation-Date: 2015-05-12 06:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,63 +14,151 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ./authorinformation.py:31
+#: ./attachedfile.py:107
+msgid "10th attach image"
+msgstr ""
+
+#: ./attachedfile.py:69
+msgid "4th attach image"
+msgstr ""
+
+#: ./attachedfile.py:75
+msgid "5th attach image"
+msgstr ""
+
+#: ./attachedfile.py:82
+msgid "6th attach image"
+msgstr ""
+
+#: ./attachedfile.py:89
+msgid "7th attach image"
+msgstr ""
+
+#: ./attachedfile.py:95
+msgid "8th attach image"
+msgstr ""
+
+#: ./attachedfile.py:101
+msgid "9th attach image"
+msgstr ""
+
+#: ./authorinformation.py:34
 msgid "Author Information"
 msgstr ""
 
-#: ./authorinformation.py:71
+#: ./scoretable.py:19
+msgid "Bad"
+msgstr ""
+
+#: ./attachedfile.py:45
+msgid "Comment reply"
+msgstr ""
+
+#: ./scoretable.py:73
+msgid "Diction smooth and chart product value"
+msgstr ""
+
+#: ./authorinformation.py:74
 msgid "Email"
 msgstr ""
 
-#: ./authorinformation.py:35
+#: ./authorinformation.py:38
 msgid "Enter author information(fields in RED DOT are Required )"
 msgstr ""
 
-#: ./authorinformation.py:51
+#: ./attachedfile.py:51
+msgid "First attach image"
+msgstr ""
+
+#: ./scoretable.py:17
+msgid "General"
+msgstr ""
+
+#: ./scoretable.py:16
+msgid "Good"
+msgstr ""
+
+#: ./authorinformation.py:54
 msgid "Institution(Chinese)"
 msgstr ""
 
-#: ./authorinformation.py:56
+#: ./authorinformation.py:59
 msgid "Institution(English)"
 msgstr ""
 
-#: ./authorinformation.py:22
+#: ./authorinformation.py:25
 msgid "Invalid email address."
 msgstr ""
 
-#: ./attachedfile.py:18
+#: ./attachedfile.py:19
 msgid "Manuscript file"
 msgstr ""
 
-#: ./authorinformation.py:39
+#: ./authorinformation.py:42
 msgid "Name(Chinese)"
 msgstr ""
 
-#: ./authorinformation.py:45
+#: ./authorinformation.py:48
 msgid "Name(English)"
 msgstr ""
 
-#: ./authorinformation.py:77
+#: ./scoretable.py:15
+msgid "Perfact"
+msgstr ""
+
+#: ./authorinformation.py:80
 msgid "Phone number"
 msgstr ""
 
-#: ./attachedfile.py:21
-msgid "Please upload Manuscript file, and you can upload images after submitting."
+#: ./attachedfile.py:121
+msgid "Please upload *.doc or *.docx file."
 msgstr ""
 
-#: ./authorinformation.py:61
+#: ./scoretable.py:63
+msgid "Research Design and Data Processing"
+msgstr ""
+
+#: ./scoretable.py:53
+msgid "Research Transcend"
+msgstr ""
+
+#: ./scoretable.py:43
+msgid "Research value"
+msgstr ""
+
+#: ./scoretable.py:29
+msgid "Score"
+msgstr ""
+
+#: ./scoretable.py:30
+msgid "Score table"
+msgstr ""
+
+#: ./attachedfile.py:57
+msgid "Second attach image"
+msgstr ""
+
+#: ./scoretable.py:18
+msgid "Soso"
+msgstr ""
+
+#: ./attachedfile.py:63
+msgid "Third attach image"
+msgstr ""
+
+#: ./authorinformation.py:64
 msgid "Title(Chinese)"
 msgstr ""
 
-#: ./authorinformation.py:66
+#: ./authorinformation.py:69
 msgid "Title(English)"
 msgstr ""
 
-#: ./authorinformation.py:46
+#: ./authorinformation.py:49
 msgid "e.g. Da-Ming Wang"
 msgstr ""
 
-#: ./authorinformation.py:40
+#: ./authorinformation.py:43
 msgid "e.g. Da-Ming Wang."
 msgstr ""
 

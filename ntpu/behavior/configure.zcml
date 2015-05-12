@@ -37,6 +37,15 @@
   <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
+        title="ScoreTable"
+        description="Score table for article"
+        provides=".scoretable.IScoreTable"
+        factory=".scoretable.ScoreTable"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
+
+    <plone:behavior
         title="AuthorInformation"
         description="Author information"
         provides=".authorinformation.IAuthorInformation"
@@ -51,5 +60,6 @@
         factory=".attachedfile.AttachedFile"
         for="plone.dexterity.interfaces.IDexterityContent"
         />
+
 
 </configure>
