@@ -28,48 +28,135 @@ class IScoreTable(model.Schema):
     form.fieldset(
         _(u'Score'),
         label=_(u"Score table"),
-        fields=['scoreQ1',
-                'scoreQ2',
-                'scoreQ3',
-                'scoreQ4',],
-#        description=_(u'Please upload Manuscript file, and you can upload images after submitting.'),
+        fields=['scoreR1Q1',
+                'scoreR1Q2',
+                'scoreR1Q3',
+                'scoreR1Q4',
+                'scoreR2Q1',
+                'scoreR2Q2',
+                'scoreR2Q3',
+                'scoreR2Q4',
+                'scoreR3Q1',
+                'scoreR3Q2',
+                'scoreR3Q3',
+                'scoreR3Q4',],
     )
 
-    dexterity.write_permission(scoreQ1='ntpu.content.IsExternalReviewer')
-    dexterity.read_permission(scoreQ1='ntpu.content.IsSuperEditor')
-    form.widget(scoreQ1=RadioFieldWidget)
-#    form.mode(scoreQ1='hidden')
-    scoreQ1 = schema.Choice(
+    dexterity.write_permission(scoreR1Q1='ntpu.content.IsExternalReviewer')
+    dexterity.read_permission(scoreR1Q1='ntpu.content.IsSuperEditor')
+    form.widget(scoreR1Q1=RadioFieldWidget)
+#    form.mode(scoreR1Q1='hidden')
+    scoreR1Q1 = schema.Choice(
         title=_(u'Research value'),
         vocabulary=Score,
         required=True,
     )
 
-    dexterity.write_permission(scoreQ2='ntpu.content.IsExternalReviewer')
-    dexterity.read_permission(scoreQ2='ntpu.content.IsSuperEditor')
-    form.widget(scoreQ2=RadioFieldWidget)
-#    form.mode(scoreQ2='hidden')
-    scoreQ2 = schema.Choice(
+    dexterity.write_permission(scoreR1Q2='ntpu.content.IsExternalReviewer')
+    dexterity.read_permission(scoreR1Q2='ntpu.content.IsSuperEditor')
+    form.widget(scoreR1Q2=RadioFieldWidget)
+#    form.mode(scoreR1Q2='hidden')
+    scoreR1Q2 = schema.Choice(
         title=_(u'Research Transcend'),
         vocabulary=Score,
         required=True,
     )
 
-    dexterity.write_permission(scoreQ3='ntpu.content.IsExternalReviewer')
-    dexterity.read_permission(scoreQ3='ntpu.content.IsSuperEditor')
-#    form.mode(scoreQ3='hidden')
-    form.widget(scoreQ3=RadioFieldWidget)
-    scoreQ3 = schema.Choice(
+    dexterity.write_permission(scoreR1Q3='ntpu.content.IsExternalReviewer')
+    dexterity.read_permission(scoreR1Q3='ntpu.content.IsSuperEditor')
+#    form.mode(scoreR1Q3='hidden')
+    form.widget(scoreR1Q3=RadioFieldWidget)
+    scoreR1Q3 = schema.Choice(
         title=_(u'Research Design and Data Processing'),
         vocabulary=Score,
         required=True,
     )
 
-    dexterity.write_permission(scoreQ4='ntpu.content.IsExternalReviewer')
-    dexterity.read_permission(scoreQ4='ntpu.content.IsSuperEditor')
-    form.widget(scoreQ4=RadioFieldWidget)
-#    form.mode(scoreQ4='hidden')
-    scoreQ4 = schema.Choice(
+    dexterity.write_permission(scoreR1Q4='ntpu.content.IsExternalReviewer')
+    dexterity.read_permission(scoreR1Q4='ntpu.content.IsSuperEditor')
+    form.widget(scoreR1Q4=RadioFieldWidget)
+#    form.mode(scoreR1Q4='hidden')
+    scoreR1Q4 = schema.Choice(
+        title=_(u'Diction smooth and chart product value'),
+        vocabulary=Score,
+        required=True,
+    )
+
+    dexterity.write_permission(scoreR2Q1='ntpu.content.IsExternalReviewer')
+    dexterity.read_permission(scoreR2Q1='ntpu.content.IsSuperEditor')
+    form.widget(scoreR2Q1=RadioFieldWidget)
+#    form.mode(scoreR2Q1='hidden')
+    scoreR2Q1 = schema.Choice(
+        title=_(u'Research value'),
+        vocabulary=Score,
+        required=True,
+    )
+
+    dexterity.write_permission(scoreR2Q2='ntpu.content.IsExternalReviewer')
+    dexterity.read_permission(scoreR2Q2='ntpu.content.IsSuperEditor')
+    form.widget(scoreR2Q2=RadioFieldWidget)
+#    form.mode(scoreR2Q2='hidden')
+    scoreR2Q2 = schema.Choice(
+        title=_(u'Research Transcend'),
+        vocabulary=Score,
+        required=True,
+    )
+
+    dexterity.write_permission(scoreR2Q3='ntpu.content.IsExternalReviewer')
+    dexterity.read_permission(scoreR2Q3='ntpu.content.IsSuperEditor')
+#    form.mode(scoreR2Q3='hidden')
+    form.widget(scoreR2Q3=RadioFieldWidget)
+    scoreR2Q3 = schema.Choice(
+        title=_(u'Research Design and Data Processing'),
+        vocabulary=Score,
+        required=True,
+    )
+
+    dexterity.write_permission(scoreR2Q4='ntpu.content.IsExternalReviewer')
+    dexterity.read_permission(scoreR2Q4='ntpu.content.IsSuperEditor')
+    form.widget(scoreR2Q4=RadioFieldWidget)
+#    form.mode(scoreR2Q4='hidden')
+    scoreR2Q4 = schema.Choice(
+        title=_(u'Diction smooth and chart product value'),
+        vocabulary=Score,
+        required=True,
+    )
+
+    dexterity.write_permission(scoreR3Q1='ntpu.content.IsExternalReviewer')
+    dexterity.read_permission(scoreR3Q1='ntpu.content.IsSuperEditor')
+    form.widget(scoreR3Q1=RadioFieldWidget)
+#    form.mode(scoreR3Q1='hidden')
+    scoreR3Q1 = schema.Choice(
+        title=_(u'Research value'),
+        vocabulary=Score,
+        required=True,
+    )
+
+    dexterity.write_permission(scoreR3Q2='ntpu.content.IsExternalReviewer')
+    dexterity.read_permission(scoreR3Q2='ntpu.content.IsSuperEditor')
+    form.widget(scoreR3Q2=RadioFieldWidget)
+#    form.mode(scoreR3Q2='hidden')
+    scoreR3Q2 = schema.Choice(
+        title=_(u'Research Transcend'),
+        vocabulary=Score,
+        required=True,
+    )
+
+    dexterity.write_permission(scoreR3Q3='ntpu.content.IsExternalReviewer')
+    dexterity.read_permission(scoreR3Q3='ntpu.content.IsSuperEditor')
+#    form.mode(scoreR3Q3='hidden')
+    form.widget(scoreR3Q3=RadioFieldWidget)
+    scoreR3Q3 = schema.Choice(
+        title=_(u'Research Design and Data Processing'),
+        vocabulary=Score,
+        required=True,
+    )
+
+    dexterity.write_permission(scoreR3Q4='ntpu.content.IsExternalReviewer')
+    dexterity.read_permission(scoreR3Q4='ntpu.content.IsSuperEditor')
+    form.widget(scoreR3Q4=RadioFieldWidget)
+#    form.mode(scoreR3Q4='hidden')
+    scoreR3Q4 = schema.Choice(
         title=_(u'Diction smooth and chart product value'),
         vocabulary=Score,
         required=True,
@@ -100,7 +187,17 @@ class ScoreTable(object):
 
     # -*- Your behavior property setters & getters here ... -*-
 
-    scoreQ1 = context_property('scoreQ1')
-    scoreQ2 = context_property('scoreQ2')
-    scoreQ3 = context_property('scoreQ3')
-    scoreQ4 = context_property('scoreQ4')
+    scoreR1Q1 = context_property('scoreR1Q1')
+    scoreR1Q2 = context_property('scoreR1Q2')
+    scoreR1Q3 = context_property('scoreR1Q3')
+    scoreR1Q4 = context_property('scoreR1Q4')
+
+    scoreR2Q1 = context_property('scoreR2Q1')
+    scoreR2Q2 = context_property('scoreR2Q2')
+    scoreR2Q3 = context_property('scoreR2Q3')
+    scoreR2Q4 = context_property('scoreR2Q4')
+
+    scoreR3Q1 = context_property('scoreR3Q1')
+    scoreR3Q2 = context_property('scoreR3Q2')
+    scoreR3Q3 = context_property('scoreR3Q3')
+    scoreR3Q4 = context_property('scoreR3Q4')
